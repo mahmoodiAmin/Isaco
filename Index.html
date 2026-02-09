@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم مدیریت قطعات خودرو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 سیستم مدیریت قطعات خودرو</h1>
+        </header>
+
+        <div class="login-section">
+            <h2>ورود به سایت شرکت</h2>
+            <div class="form-group">
+                <label for="site-url">آدرس سایت شرکت:</label>
+                <input type="text" id="site-url" placeholder="https://example.com">
+            </div>
+            <div class="form-group">
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور:</label>
+                <input type="password" id="password">
+            </div>
+            <button onclick="simulateLogin()">ورود</button>
+        </div>
+
+        <div class="main-section hidden">
+            <div class="form-group">
+                <label for="chassis-number">شماره شاسی:</label>
+                <input type="text" id="chassis-number" placeholder="مثال: VIN123456789">
+                <button onclick="loadCatalog()">بارگذاری کاتالوگ</button>
+            </div>
+
+            <div class="search-section">
+                <input type="text" id="search-parts" placeholder="جستجوی قطعه..." onkeyup="searchParts()">
+            </div>
+
+            <div class="catalog-section">
+                <h3>کاتالوگ قطعات</h3>
+                <div id="parts-list" class="parts-list">
+                    <!-- قطعات اینجا نمایش داده می‌شوند -->
+                </div>
+            </div>
+
+            <div class="cart-section">
+                <h3>📦 سبد درخواست</h3>
+                <div id="cart-items"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
